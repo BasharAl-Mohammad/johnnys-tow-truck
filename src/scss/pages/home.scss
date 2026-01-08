@@ -32,6 +32,9 @@
   &__title {
     margin-bottom: 1rem;
     font-size: 2rem;
+    @include respond-to('phone') {
+      font-size: 1rem;
+    }
   }
   
   &__subtitle {
