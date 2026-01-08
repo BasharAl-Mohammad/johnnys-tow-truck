@@ -1,0 +1,21 @@
+.card {
+  background: $color-white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: $transition-base;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  i {
+    color: $color-text-light ;
+    font-size: 2rem;
+  }
+  h3 {
+    color: $color-primary;
+    margin-bottom: 1rem;
+  }
+}

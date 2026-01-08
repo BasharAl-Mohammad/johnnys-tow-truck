@@ -1,0 +1,21 @@
+.footer {
+  background: $color-bg-dark;
+  color: $color-white;
+  padding: 3rem 0;
+  margin-top: auto;
+
+  &__content {
+    @include flex-center;
+    flex-direction: column;
+    gap: 1rem;
+    
+    @include respond-to(mobile) {
+      text-align: center;
+    }
+  }
+
+  .socials__link {
+    margin: 0 10px;
+    &:hover { color: $color-primary; }
+  }
+}

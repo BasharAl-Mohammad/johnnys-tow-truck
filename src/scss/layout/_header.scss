@@ -1,0 +1,111 @@
+.header {
+  background-color: transparent; // Keep distinct for desktop
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 2rem;
+
+    // Tablet: Center everything vertically (optional based on your preference)
+    @include respond-to('tablet') {
+      padding: 1rem;
+    }
+    
+    // Phone: Ensure Logo and Burger are on the same row
+    @include respond-to('phone') {
+      flex-direction: row; 
+      justify-content: space-between;
+    }
+  }
+
+  .logo {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: $color-primary;
+    z-index: 101; // Ensure logo stays above mobile menu
+  }
+
+  // --- HAMBURGER MENU ICON ---
+  .hamburger {
+    display: none; // Hidden on desktop
+    cursor: pointer;
+    z-index: 101; // Ensure it stays on top of the open menu
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background-color: white; // Assuming white icons, change to $color-primary if needed
+    }
+
+    // Styles specifically for phone
+    @include respond-to('phone') {
+      display: block;
+    }
+
+    // Animation when active (Turns into X)
+    &.active {
+      .bar:nth-child(2) { opacity: 0; }
+      .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+      .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    }
+  }
+
+  // --- NAVIGATION ---
+  .nav {
+    // Phone Transformation
+    @include respond-to('phone') {
+      position: fixed;
+      left: -100%; // Hide off-screen to the left
+      top: 0;
+      width: 100%;
+      height: 100vh; // Full screen height
+      background-color: rgba(0, 0, 0, 0.95); // Dark background for readability
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+      z-index: 100; // Just below the logo/hamburger
+
+      &.active {
+        left: 0; // Slide in
+      }
+    }
+  }
+
+  .nav__list {
+    display: flex;
+    font-size: 1.3rem;
+    gap: 30px;
+
+    @include respond-to('tablet') {
+      gap: 20px;
+      font-size: 0.9rem;
+    }
+
+    // Phone: Stack vertically
+    @include respond-to('phone') {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      font-size: 1.5rem; // Bigger text for mobile
+    }
+
+    .nav__link {
+      font-weight: 500;
+      transition: $transition-base;
+      color: white;
+      &:hover { color: $color-primary; }
+    }
+  }
+}

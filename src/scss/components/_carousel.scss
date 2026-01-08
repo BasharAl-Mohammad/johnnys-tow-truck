@@ -1,0 +1,47 @@
+.carousel {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+
+  &__track-container {
+    height: 100%;
+    position: relative;
+  }
+
+  &__track {
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: $color-white;
+    border: none;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    
+    &:hover { background: rgba(0,0,0,0.8); }
+    &--prev { left: 0; }
+    &--next { right: 0; }
+  }
+}

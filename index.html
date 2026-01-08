@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Johnnys</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="#" class="logo">JOHNNYS</a>
+        
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li>
+                <a href="#services" class="nav__link">
+                    Services | <span class="ar-text">خدمات</span>
+                </a>
+            </li>
+            <li>
+                <a href="#gallery" class="nav__link">
+                    Gallery | <span class="ar-text">المعرض</span>
+                </a>
+            </li>
+            <li>
+                <a href="#coverage" class="nav__link">
+                    Coverage | <span class="ar-text">التغطية</span>
+                </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="banner">
+      <div class="container banner__content">
+        <h1 class="banner__title">
+            If It Fits on this Flatbed, We'll Move It.
+            <br>
+            <span class="ar-text">إذا بتساع على السطحة، مننقلها</span>
+        </h1>
+        <p class="banner__subtitle">
+            Fast, safe, and reliable transport for almost anything.
+            <br>
+            <span class="ar-text">نقل سريع، آمن، وموثوق لأي شيء تقريباً.</span>
+        </p>
+        <div class="banner__btns">
+          <a href="tel:+96170123456" class="btn btn--primary">
+              Call Us | <span class="ar-text">اتصل بنا</span>
+          </a>
+          <a href="https://wa.me/96170123456" target="_blank" class="btn btn--primary">
+              WhatsApp | <span class="ar-text">واتساب</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="services__grid">
+          <div class="card">
+            <span class=""></span>
+            <i class="fa-solid fa-car"></i>
+            <h3>
+                Vehicle Towing & Recovery
+                <br>
+                <span class="ar-text">قطر وإنقاذ السيارات</span>
+            </h3>
+            <p>
+                Breakdowns, accidents, no-starts, or damaged vehicles — we provide safe flatbed towing to ensure zero additional damage.
+                <br><br>
+                <span class="ar-text">أعطال أو حوادث - نوفر خدمة "بلاطو" آمنة لضمان عدم حدوث أي ضرر إضافي لسيارتك.</span>
+            </p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-truck"></i>
+            <h3>
+                Machinery & Equipment
+                <br>
+                <span class="ar-text">نقل الآليات والمعدات</span>
+            </h3>
+            <p>
+                Reliable transport for small construction machines, generators, forklifts, industrial equipment, and heavy items.
+                <br><br>
+                <span class="ar-text">نقل موثوق للآليات الصغيرة، المولدات الكهربائية (الموتيرات)، الرافعات الشوكية، والمعدات الصناعية.</span>
+            </p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-motorcycle"></i>
+            <h3>
+                Specialty & General Transport
+                <br>
+                <span class="ar-text">نقل عام ونقل خاص</span>
+            </h3>
+            <p>
+                Motorcycles, project cars, low cars, classic cars, furniture, large items — if it fits on this flatbed, we can move it safely.
+                <br><br>
+                <span class="ar-text">دراجات نارية، سيارات كلاسيكية أو رياضية منخفضة، وأثاث. إذا كانت تتسع، ننقلها بأمان.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section carousel-section">
+      <div class="container">
+        <div class="carousel">
+          <button class="carousel__btn carousel__btn--prev" id="prevBtn">&#10094;</button>
+          
+          <div class="carousel__track-container">
+            <ul class="carousel__track">
+              <li class="carousel__slide current-slide">
+                <img src="public/IMG_0528.png" alt="Project 1">
+              </li>
+              <li class="carousel__slide">
+                <img src="public/IMG_0772.png" alt="Project 2">
+              </li>
+              <li class="carousel__slide">
+                <img src="public/IMG_8976.png" alt="Project 3">
+              </li>
+              <li class="carousel__slide">
+                <img src="public/IMG_9612.png" alt="Project 3">
+              </li>
+              <li class="carousel__slide">
+                <img src="public/IMG_9811.png" alt="Project 3">
+              </li>
+              <li class="carousel__slide">
+                <img src="public/IMG_9963.png" alt="Project 3">
+              </li>
+            </ul>
+          </div>
+
+          <button class="carousel__btn carousel__btn--next" id="nextBtn">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="coverage" class="section coverage">
+      <div class="container coverage__container">
+        <div class="coverage__text">
+          <h2 class="section__title">
+              Area of Coverage
+              <br>
+              <span class="ar-text">مناطق الخدمة</span>
+          </h2>
+          <p>
+              We provide transport service across Lebanon. Feel free to call for emergencies or call for bookings.
+              <br>
+              <span class="ar-text">نغطي جميع الأراضي اللبنانية. اتصل بنا للحالات الطارئة أو للحجز المسبق.</span>
+          </p>
+          <ul class="coverage__list">
+            <li><a href="https://wa.me/96170123456" target="_blank">Whatsapp / واتساب <i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://www.tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer">Tiktok / تيك توك <i class="fa-brands fa-tiktok"></i></a></li>
+          </ul>
+        </div>
+        <div class="coverage__map">
+          <div class="map-placeholder" id="coverage-map"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <p>&copy; 2026 BBQode. All rights reserved. <span class="ar-text">| جميع الحقوق محفوظة</span></p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://kit.fontawesome.com/df30c270f5.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  </body>
+</html>

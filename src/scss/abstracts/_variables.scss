@@ -1,0 +1,23 @@
+$color-primary: #9BC063;
+$color-primary-dark: darken($color-primary, 10%);
+$color-text-main: #333;
+$color-text-light: #666;
+$color-bg-light: #f3f4f6;
+$color-bg-dark: #1f2937;
+$color-white: #ffffff;
+
+$font-family-base: 'Roboto', sans-serif;
+$font-size-base: 16px;
+
+$max-width: 1200px;
+$container-padding: 20px;
+
+$transition-base: all 0.3s ease;
+
+$breakpoints: (
+  'phone-sm': 480px,    // Small phones
+  'phone': 600px,       // Large phones
+  'tablet': 768px,      // Ipads / Tablets portrait
+  'laptop': 1024px,     // Laptops / Tablets landscape
+  'desktop': 1200px     // Desktops
+);
