@@ -17,6 +17,8 @@
     position: absolute;
     bottom: 20vh;
     left: 10vw;
+    display: flex;
+    flex-direction: column;
   }
 
   @include respond-to('phone') {
@@ -32,11 +34,13 @@
   &__title {
     margin-bottom: 1rem;
     font-size: 1rem;
+    flex-grow:1;
   }
   
   &__subtitle {
     font-size: 1rem;
     margin-bottom: 2rem;
+    flex-grow:1;
   }
 
   &__btns {
@@ -44,6 +48,14 @@
     flex-direction: row;
     gap:5px;
     width: 35vw;
+
+    #wp {
+      flex-grow:1;
+    }
+
+    #call {
+      flex-grow:1;
+    }
   }
 }
 
