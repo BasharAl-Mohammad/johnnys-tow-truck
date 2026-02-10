@@ -1,7 +1,7 @@
 .banner {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../../images/johnny-banner.webp');
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../../images/banner-2.jpeg');
   background-size: cover;
-  background-position: right;
+  background-position: right center;
   height: 75vh; 
   position: relative;
   @include respond-to('laptop') { height: 60vh; }
