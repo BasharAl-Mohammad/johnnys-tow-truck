@@ -1,8 +1,8 @@
 .banner {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../../images/banner.webp');
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../../images/johnny-banner.webp');
   background-size: cover;
-  background-position: center;
-  height: 70vh; 
+  background-position: right;
+  height: 75vh; 
   position: relative;
   @include respond-to('laptop') { height: 60vh; }
   @include respond-to('phone') { height: 50vh; }
@@ -42,6 +42,139 @@
     font-size: 1rem;
   }
 }
+
+// .banner {
+//   min-height: 80vh;
+//   position: relative;
+
+//   display: flex;
+//   align-items: center;
+
+//   color: $color-white;
+//   padding: 0 20px;
+
+//   background:
+//     linear-gradient(
+//       90deg,
+//       rgba(0,0,0,0.85) 0%,
+//       rgba(0,0,0,0.6) 45%,
+//       rgba(0,0,0,0.2) 100%
+//     ),
+//     url('/images/johnny-banner.webp');
+
+//   background-size: cover;
+//   background-position: center right;
+//   background-repeat: no-repeat;
+
+
+//   @include respond-to('laptop') { min-height: 60vh; }
+//   @include respond-to('phone') {
+//     min-height: 50vh;
+//     background-position: center left;
+//   }
+
+//   &__content {
+//     max-width: 640px;
+//   }
+
+//   &__title {
+//     font-size: clamp(1.8rem, 3vw, 3rem);
+//     font-weight: 800;
+//     line-height: 1.2;
+//     margin-bottom: 1rem;
+//   }
+
+//   &__subtitle {
+//     font-size: clamp(1rem, 1.5vw, 1.2rem);
+//     color: #ddd;
+//     margin-bottom: 2rem;
+//   }
+
+//   &__btns {
+//     display: flex;
+//     gap: 12px;
+
+//     a {
+//       flex: 1;
+//       min-width: 160px;
+//       padding: 14px 22px;
+//       text-align: center;
+//       font-weight: 700;
+//     }
+
+//     @include respond-to('phone') {
+//       flex-direction: column;
+//       a { width: 100%; }
+//     }
+//   }
+// }
+
+.services {
+  background-color: $color-bg-light;
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+
+    @include respond-to('phone') {
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.coverage {
+  &__container {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    @include respond-to('laptop') {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+  }
+
+  &__text { 
+    flex: 1; 
+    
+    @include respond-to('laptop') {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  &__map { 
+    flex: 1; 
+    width: 100%; 
+  }
+
+  .coverage__list {
+    margin-top: 1rem;
+    text-align: left;
+    li {
+      font-size: 1rem;
+      color: darken($color-text-main, 90);
+    }
+  }
+
+  .map-placeholder {
+    width: 100%;
+    height: 350px;
+    background: #e5e7eb;
+    border-radius: 8px;
+    @include flex-center;
+    color: $color-text-light;
+    
+    @include respond-to('phone') {
+      height: 250px;
+    }
+  }
+}
+
 
 .services {
   background-color: $color-bg-light;
