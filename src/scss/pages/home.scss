@@ -46,7 +46,7 @@
 .banner {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../../images/banner-2.jpeg');
   background-size: cover;
-  background-position: right center;
+  background-position: center center;
   height: 75vh; 
   position: relative;
   @include respond-to('laptop') { height: 60vh; }
@@ -89,8 +89,6 @@
         box-sizing: border-box;
         
         a {
-            background-color: $color-bg-light;
-            color: $color-text-main;
             border: 1px solid #ccc;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
@@ -109,6 +107,10 @@
 
 .services {
   background-color: $color-bg-light;
+
+    @include respond-to('phone') {
+      margin-top: 10px;
+    }
   
   &__grid {
     display: grid;
