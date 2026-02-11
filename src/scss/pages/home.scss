@@ -1,3 +1,48 @@
+// .banner {
+//   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../../images/banner-2.jpeg');
+//   background-size: cover;
+//   background-position: right center;
+//   height: 75vh; 
+//   position: relative;
+//   @include respond-to('laptop') { height: 60vh; }
+//   @include respond-to('phone') { height: 50vh; }
+//   // @include flex-center;
+//   display: flex;
+//   align-items: center;
+
+//   &__content {
+//     width: $max-width;
+//   }
+
+//   color: $color-white;
+//   padding: 0 20px;
+
+//   &__btns {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 10px;
+//     @include respond-to('phone') {
+//         flex-direction: column;
+//     }
+//     a {
+//       flex: 1 1 0;
+//       min-width: 120px;
+//       max-width: 300px;
+//       padding: 10px 20px;
+//       text-align: center;
+//     }
+
+//   }
+
+//   &__title {
+//     font-size: 1.3rem;
+//   }
+  
+//   &__subtitle {
+//     font-size: 1rem;
+//   }
+// }
+
 .banner {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../../images/banner-2.jpeg');
   background-size: cover;
@@ -21,15 +66,34 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    @include respond-to('phone') {
-        flex-direction: column;
-    }
+
     a {
       flex: 1 1 0;
       min-width: 120px;
       max-width: 300px;
       padding: 10px 20px;
       text-align: center;
+    }
+
+    @include respond-to('phone') {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        
+        a {
+            background-color: $color-bg-light;
+            color: $color-text-main;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
     }
 
   }
@@ -42,72 +106,6 @@
     font-size: 1rem;
   }
 }
-
-// .banner {
-//   min-height: 80vh;
-//   position: relative;
-
-//   display: flex;
-//   align-items: center;
-
-//   color: $color-white;
-//   padding: 0 20px;
-
-//   background:
-//     linear-gradient(
-//       90deg,
-//       rgba(0,0,0,0.85) 0%,
-//       rgba(0,0,0,0.6) 45%,
-//       rgba(0,0,0,0.2) 100%
-//     ),
-//     url('/images/johnny-banner.webp');
-
-//   background-size: cover;
-//   background-position: center right;
-//   background-repeat: no-repeat;
-
-
-//   @include respond-to('laptop') { min-height: 60vh; }
-//   @include respond-to('phone') {
-//     min-height: 50vh;
-//     background-position: center left;
-//   }
-
-//   &__content {
-//     max-width: 640px;
-//   }
-
-//   &__title {
-//     font-size: clamp(1.8rem, 3vw, 3rem);
-//     font-weight: 800;
-//     line-height: 1.2;
-//     margin-bottom: 1rem;
-//   }
-
-//   &__subtitle {
-//     font-size: clamp(1rem, 1.5vw, 1.2rem);
-//     color: #ddd;
-//     margin-bottom: 2rem;
-//   }
-
-//   &__btns {
-//     display: flex;
-//     gap: 12px;
-
-//     a {
-//       flex: 1;
-//       min-width: 160px;
-//       padding: 14px 22px;
-//       text-align: center;
-//       font-weight: 700;
-//     }
-
-//     @include respond-to('phone') {
-//       flex-direction: column;
-//       a { width: 100%; }
-//     }
-//   }
-// }
 
 .services {
   background-color: $color-bg-light;
