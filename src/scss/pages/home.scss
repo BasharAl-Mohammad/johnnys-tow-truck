@@ -76,6 +76,7 @@
     }
 
     @include respond-to('phone') {
+        background-color: $color-bg-light;
         flex-direction: row;
         align-items: center;
         justify-content: center;
