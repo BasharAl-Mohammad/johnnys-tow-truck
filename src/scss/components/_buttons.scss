@@ -11,6 +11,7 @@
   cursor: pointer;
   transition: $transition-base;
   letter-spacing: 0.3px;
+  white-space: nowrap;
 
   &--primary {
     background-color: $color-primary;
