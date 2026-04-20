@@ -1,18 +1,49 @@
 .btn {
-  display: inline-block;
-  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 14px 28px;
   border: none;
-  border-radius: 4px;
-  font-weight: 600;
+  border-radius: $border-radius-pill;
+  font-weight: 700;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: $transition-base;
+  letter-spacing: 0.3px;
 
   &--primary {
     background-color: $color-primary;
     color: $color-white;
+    box-shadow: 0 4px 14px rgba(155, 192, 99, 0.4);
 
     &:hover {
       background-color: $color-primary-dark;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(155, 192, 99, 0.5);
+    }
+  }
+
+  &--whatsapp {
+    background-color: $color-whatsapp;
+    color: $color-white;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+
+    &:hover {
+      background-color: $color-whatsapp-dark;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background: $color-primary;
+      color: $color-white;
       transform: translateY(-2px);
     }
   }

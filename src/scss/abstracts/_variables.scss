@@ -1,9 +1,12 @@
 $color-primary: #9BC063;
-$color-primary-dark: darken($color-primary, 30%);
+$color-primary-dark: #6B9040;
+$color-primary-light: #e8f3d6;
+$color-whatsapp: #25D366;
+$color-whatsapp-dark: #1aab52;
 $color-text-main: #333;
 $color-text-light: #666;
 $color-bg-light: #f3f4f6;
-$color-bg-dark: #1f2937;
+$color-bg-dark: #111827;
 $color-white: #ffffff;
 
 $font-family-base: 'Roboto', sans-serif;
@@ -12,12 +15,21 @@ $font-size-base: 16px;
 $max-width: 1200px;
 $container-padding: 20px;
 
+$border-radius-sm: 6px;
+$border-radius-md: 12px;
+$border-radius-pill: 50px;
+
+$shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+$shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+$shadow-lg: 0 20px 40px rgba(0,0,0,0.18);
+
 $transition-base: all 0.3s ease;
+$transition-fast: all 0.2s ease;
 
 $breakpoints: (
-  'phone-sm': 480px,    // Small phones
-  'phone': 600px,       // Large phones
-  'tablet': 768px,      // Ipads / Tablets portrait
-  'laptop': 1024px,     // Laptops / Tablets landscape
-  'desktop': 1200px     // Desktops
+  'phone-sm': 480px,
+  'phone': 600px,
+  'tablet': 768px,
+  'laptop': 1024px,
+  'desktop': 1200px
 );

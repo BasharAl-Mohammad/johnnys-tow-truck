@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Fustat:wght@200..800&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 
 html {
-  // Fluid font-size: scales smoothly between 14px and 16px depending on screen width
-  font-size: 100%; 
+  scroll-behavior: smooth;
+  font-size: 100%;
   
   @include respond-to('tablet') {
     font-size: 90%; // ~14.4px

@@ -1,21 +1,60 @@
 .footer {
   background: $color-bg-dark;
-  color: $color-white;
-  padding: 3rem 0;
-  margin-top: auto;
+  color: rgba(255,255,255,0.7);
+  padding: 3rem 0 2rem;
 
   &__content {
-    @include flex-center;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  &__socials {
+    display: flex;
     gap: 1rem;
-    
-    @include respond-to(mobile) {
-      text-align: center;
+  }
+
+  &__social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.7);
+    font-size: 1.1rem;
+    transition: $transition-base;
+
+    &:hover {
+      border-color: $color-primary;
+      color: $color-primary;
+      transform: translateY(-3px);
+    }
+
+    &--whatsapp:hover {
+      border-color: $color-whatsapp;
+      color: $color-whatsapp;
     }
   }
 
-  .socials__link {
-    margin: 0 10px;
-    &:hover { color: $color-primary; }
+  &__copy {
+    font-size: 0.9rem;
+  }
+
+  &__credit {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+
+    a {
+      color: $color-primary;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
