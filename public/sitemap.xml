@@ -2,14 +2,8 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.johnnys-transport.com/</loc>
-  </url>
-    <url>
-    <loc>https://www.johnnys-transport.com/#services</loc>
-  </url>
-    <url>
-    <loc>https://www.johnnys-transport.com/#gallery</loc>
-  </url>
-    <url>
-    <loc>https://www.johnnys-transport.com/#coverage</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
 </urlset>
